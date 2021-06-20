@@ -1,10 +1,8 @@
-//Dependences
+// Dependences
 import * as admin from 'firebase-admin';
-
-//Models
+// Models
 import {Medical} from "../models/Medical";
-
-//Firebase Settings
+// Firebase Settings
 const serviceAccount = require("../serviceAccountKey.json");
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -12,23 +10,10 @@ admin.initializeApp({
 });
 const db = admin.firestore();
 const router = require("express").Router();
-
-
-
-//Services
+// Services
 router.post("/create",async (req:any, res:any) => {
     let medical:Medical = new Medical();
-    medical.name = req.body.name;
-    medical.lastname = req.body.name;
-    medical.availability = req.body.availability;
-    medical.city = req.body.city;
-    medical.consultation = req.body.consultation;
-    medical.days = req.body.days;
-    medical.especiality = req.body.especiality;
-    medical.experience = req.body.experience;
-    medical.identification = req.body.identification;
-    medical.phone = req.body.phone;
-    medical.schedule= req.body.schedule;
+    medical = req.body as Medical;
     await checkMedicalExists(medical.identification).get().then(docSnapshot => {
         if (!docSnapshot.exists) {
             const newMedicalRef = db.collection('medicals').doc(medical.identification);
@@ -54,17 +39,7 @@ router.post("/create",async (req:any, res:any) => {
 });
 router.put("/update",async (req:any, res:any) => {
     let medical:Medical = new Medical();
-    medical.name = req.body.name;
-    medical.lastname = req.body.lastname;
-    medical.availability = req.body.availability;
-    medical.city = req.body.city;
-    medical.consultation = req.body.consultation;
-    medical.days = req.body.days;
-    medical.especiality = req.body.especiality;
-    medical.experience = req.body.experience;
-    medical.identification = req.body.identification;
-    medical.phone = req.body.phone;
-    medical.schedule= req.body.schedule;
+    medical = req.body as Medical;
     const updateMedicalRef = db.collection('medicals').doc(medical.identification);
         updateMedicalRef.update(JSON.parse(JSON.stringify(medical)))
         .then(response => { // medical created
@@ -158,7 +133,7 @@ router.delete("/delete/:id",async (req:any, res:any) => {
     });
 });
 
-//Functions
+// Functions
 function checkMedicalExists(identification: string) {
     return db.collection('medicals').doc(identification);
 }

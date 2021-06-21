@@ -1,0 +1,41 @@
+[{
+        "nombre": "Daniel Yanez",
+        "especialidad": "Cardiólogo",
+        "aniosExperiencia": "7",
+        "area": "Cardiología",
+        "telefono": "0993530332",
+        "ciudad": "Riobamba",
+        "horas": "7am - 7pm",
+        "dias": "L-M-MI-J-V"
+    },
+    {
+        "nombre": "Christian Guanopatin",
+        "especialidad": "Cardiólogo",
+        "aniosExperiencia": "14",
+        "area": "Cardiología",
+        "telefono": "0993530371",
+        "ciudad": "Ambato",
+        "horas": "8am - 5pm",
+        "dias": "MI-J-V"
+    },
+    {
+        "nombre": "Bryan Sandoval",
+        "especialidad": "Cirújano",
+        "aniosExperiencia": "10",
+        "area": "Obstetría",
+        "telefono": "099753037",
+        "ciudad": "Ambato",
+        "horas": "8am - 9pm",
+        "dias": "L-J-V"
+    },
+    {
+        "nombre": "Cristian Venegas",
+        "especialidad": "Médico Obstetra",
+        "aniosExperiencia": "10",
+        "area": "Obstetría",
+        "telefono": "099753037",
+        "ciudad": "Ambato",
+        "horas": "8am - 9pm",
+        "dias": "L-J-V"
+    }
+]

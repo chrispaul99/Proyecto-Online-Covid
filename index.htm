@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="functions.js"></script>
+    <title>REGISTRO MÉDICOS</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <div class="registration-form">
+        <form>
+            <div class="form-icon">
+                <span><i class="icon icon-user"></i></span>
+            </div>
+            <h2>Sistema de registro de médicos</h2><br>
+            <!-- nombre -->
+            <div class="form-group">
+                <input type="text" class="form-control item" id="nombre" placeholder="Nombre">
+            </div>
+            <!-- especialidad -->
+            <div class="form-group">
+                <input type="text" class="form-control item" id="especialidad" placeholder="Especialidad">
+            </div>
+            <!-- anios de experiencia -->
+            <div class="form-group">
+                <input type="number" class="form-control item" id="aniosExperiencia" placeholder="Años de experiencia">
+            </div>
+            <!-- area -->
+            <div class="form-group">
+                <input type="text" class="form-control item" id="area" placeholder="Área médica">
+            </div>
+            <!-- telefono -->
+            <div class="form-group">
+                <input type="number" class="form-control item" id="telefono" placeholder="Teléfono">
+            </div>
+            <!-- ciudad -->
+            <div class="form-group">
+                <input type="ciudad" class="form-control item" id="ciudad" placeholder="Ciudad">
+            </div>
+            <!-- horario de atencion -->
+            <div class="form-group">
+                <input type="text" class="form-control item" id="horas" placeholder="Horario atencion">
+            </div>
+            <!-- dias de atencion -->
+            <div class="form-group">
+                <input type="text" class="form-control item" id="dias" placeholder="Días atencion">
+            </div>
+
+            <!-- Registrar -->
+            <div class="form-group">
+                <button class="btn btn-primary" class="registrar" style="width:100%; border-radius:18px;" onclick="cargarPagina()">Registrar</button>
+            </div>
+
+        </form>
+        <div class="social-media">
+            <h5>Sign up with social media</h5>
+            <div class="social-icons">
+                <a href="#"><i class="icon-social-facebook" title="Facebook"></i></a>
+                <a href="#"><i class="icon-social-google" title="Google"></i></a>
+                <a href="#"><i class="icon-social-twitter" title="Twitter"></i></a>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+
+</body>
+
+</html>

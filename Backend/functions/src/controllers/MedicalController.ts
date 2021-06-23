@@ -1,13 +1,6 @@
-// Dependences
 import * as admin from 'firebase-admin';
 // Models
 import {Medical} from "../models/Medical";
-// Firebase Settings
-const serviceAccount = require("../serviceAccountKey.json");
-admin.initializeApp({
-    credential: admin.credential.cert(serviceAccount),
-    databaseURL: "https://seguimiento-covid-online.firebaseio.com"
-});
 const db = admin.firestore();
 const router = require("express").Router();
 // Services
@@ -108,12 +101,12 @@ router.put("/upmedical/:id",async (req:any, res:any) => {
     }).then(response => { // medical up
         res.json({
             success: true,
-            message: 'Baja temporal de Médico',
+            message: 'Alta de Médico ya registrado',
         })
     }).catch(e => { // error up medical
         res.json({
             success: false,
-            message: 'Error en la baja temporal del Médico'
+            message: 'Error en la alta de Médico ya registrado'
         })
     });
 });
